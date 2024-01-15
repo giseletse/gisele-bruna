@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Legend of Zelda</title>
+    
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+    </style>
+    <header>
+    <h1>Marvel's Avengers - Edição Padrão - PlayStation 4</h1>
+    </header>
+    <H2>Descrição do produto</H2>
+    <img src="https://m.media-amazon.com/images/I/81naA2c0FKL._AC_SY550_.jpg">
+        <p>O Minecraft é um videogame líder no gênero de aventura e ação, onde quem joga pode escolher entre sobrevivência, criatividade e extrema dificuldade. Graças ao mundo quase infinito de terrenos que apresenta, é possível que os participantes joguem por horas encontrando vários desafios.</p>
+
+        <p> Interaja com outros jogadores <bR>
+            Você poderá desfrutar de uma experiência incomparável, pois permite que você jogue com seus amigos e compartilhar momentos inesquecíveis.</p>
+            
+            <p> Diversão sem fronteiras <BR>
+            Você será capaz de compartilhar cada jogo com pessoas de todo o mundo, pois é possível conectar-se de maneira online.</p>
+    <ol>
+ 
+        <p>Este jogo é compativel com:</p>
+        <p>Xbox</p>
+ 
+        <p>R$30,00</p>
+        <button onclick="addToCart('Marvels Avengers - Edição Padrão - PlayStation 4l', 30.00)">Adicionar ao Carrinho</button>
+    </main>
+
+    <script>
+        function addToCart(name, price) {
+            // Obtém o carrinho do armazenamento local ou cria um novo array vazio
+            const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+            // Adiciona o item ao carrinho
+            cartItems.push({ id: cartItems.length + 1, name, price });
+
+            // Armazena o carrinho atualizado no armazenamento local
+            localStorage.setItem('cart', JSON.stringify(cartItems));
+
+            // Redireciona para a página do carrinho
+            window.location.href = 'tcarinho.html';
+        }
+    </script>
+       
+            
+        </body>
+</html>

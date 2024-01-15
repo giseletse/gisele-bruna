@@ -1,0 +1,162 @@
+<!-- Página do Carrinho -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras - Exemplo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        #cartItems {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        #cartItems th,
+        #cartItems td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        #cartItems th {
+            background-color: #333;
+            color: white;
+        }
+
+        #total {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        button {
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        button:hover {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Carrinho de Compras</h1>
+    </header>
+    
+    <main>
+        <table id="cartItems">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Preço</th>
+                    <th>excluir item</th>
+                </tr>
+            </thead>
+            <tbody id="cartItemsBody"></tbody>
+        </table>
+        <div id="total">Total: R$ 0.00</div>
+        <button onclick="clearCart()">Apagar Carrinho</button>
+        <button onclick="checkout()">Finalizar Compra</button>
+    </main>
+
+    <script>
+        // Obtém o carrinho do armazenamento local ou cria um novo array vazio
+        const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+        const cartList = document.getElementById('cartItemsBody');
+        const totalDiv = document.getElementById('total');
+    
+        // Adiciona cada item do carrinho à tabela e calcula o total
+        let total = 0;
+        cartItems.forEach((item, index) => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${item.name}</td>
+                <td>R$ ${item.price.toFixed(2)}</td>
+                <td><button onclick="removeItem(${index})">Remover</button></td>
+            `;
+            cartList.appendChild(row);
+
+            total += item.price;
+        });
+
+        // Exibe o total na interface
+        totalDiv.textContent = `Total: R$ ${total.toFixed(2)}`;
+
+        // Função para remover um item do carrinho
+        function removeItem(index) {
+            const removedItem = cartItems.splice(index, 1)[0];
+            localStorage.setItem('cart', JSON.stringify(cartItems));
+            updateCart();
+            updateTotal();
+        }
+
+        // Função para apagar o carrinho
+        function clearCart() {
+            localStorage.removeItem('cart');
+            updateCart();
+            updateTotal();
+        }
+
+        // Função para finalizar a compra (pode ser personalizada conforme necessário)
+        function checkout() {
+            const orderDetails = {
+                products: cartItems.map(item => item.name),
+                paymentStatus: 'Aguardando pagamento' // Pode ajustar conforme necessário
+            };
+            localStorage.setItem('orderDetails', JSON.stringify(orderDetails));
+            window.location.href = 'final.html';
+            clearCart(); // Limpa o carrinho após finalizar a compra (você pode ajustar isso conforme necessário)
+        }
+
+        // Função para atualizar a exibição do carrinho
+        function updateCart() {
+            cartList.innerHTML = '';
+            cartItems.forEach((item, index) => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${item.name}</td>
+                    <td>R$ ${item.price.toFixed(2)}</td>
+                    <td><button onclick="removeItem(${index})">Remover</button></td>
+                `;
+                cartList.appendChild(row);
+            });
+        }
+
+        // Função para atualizar a exibição do total
+        function updateTotal() {
+            total = cartItems.reduce((acc, item) => acc + item.price, 0);
+            totalDiv.textContent = `Total: R$ ${total.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Legend of Zelda</title>
+    
+    <style>
+            body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+    </style>
+    <header><h1>A Patrulha Canina 'tá com tudo! PS5 Mídia Digital</h1>
+    </header>
+    <H2>Descrição do produto</H2>
+    <img
+        src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcT28SBK-66VeIgmOVB9tB2t1wi5ubT-D4bwCtfGz8nxhAKhj5qrFx293GmIvVBMmLgtk1KeytXMp0eZGz_27IgR1miOZHkWvnifUhmfCJTC39SDvQRB4UGQ&usqp=CAE">
+    <p>A Patrulha Pata vai entrar em ação! Nenhuma missão é demasiado grande, nenhum cão é demasiado pequeno! A Patrulha Pata está a postos para salvar o dia na Baía da Aventura, em 16 empolgantes missões de salvamento, mas, para isso, vai precisar da tua ajuda! Ajuda Marshall, Chase, Skye, Rubble, Everest, Tracker e o resto da equipa, usando as suas habilidades únicas para salvar amigos e manter a comunidade a salvo. Entra em oito cenários fantásticos na Baía da Aventura, incluindo a Quinta da Sra. Yumi, a Montanha do Jake, um desfiladeiro deserto, um cenário subaquático, e muito mais! Prepara-te para um jogo de plataformas e puzzles repleto de ação, perfeito para miúdos de todas as idades, onde encontrarás todos os cães da Patrulha Pata!</p>
+ 
+    <ol>
+ 
+        <p>Este jogo é compativel com:
+        <p>PS5</p>
+ 
+        <p>R$30,00</p>
+        <button onclick="addToCart('A Patrulha Canina tá com tudo! PS5 Mídia Digital', 30.00)">Adicionar ao Carrinho</button>
+    </main>
+
+    <script>
+        function addToCart(name, price) {
+            // Obtém o carrinho do armazenamento local ou cria um novo array vazio
+            const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+            // Adiciona o item ao carrinho
+            cartItems.push({ id: cartItems.length + 1, name, price });
+
+            // Armazena o carrinho atualizado no armazenamento local
+            localStorage.setItem('cart', JSON.stringify(cartItems));
+
+            // Redireciona para a página do carrinho
+            window.location.href = 'tcarinho.html';
+        }
+        </script>  
+        </body>
+</html>

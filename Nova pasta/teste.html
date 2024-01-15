@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+ 
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>Avaliações</title>
+</head>
+ 
+<body>
+    <div class="rating" onclick="handleRating(event)">
+        <input type="radio" name="star" id="star1"><label for="star1"></label>
+        <input type="radio" name="star" id="star2"><label for="star2"></label>
+        <input type="radio" name="star" id="star3"><label for="star3"></label>
+        <input type="radio" name="star" id="star4"><label for="star4"></label>
+        <input type="radio" name="star" id="star5"><label for="star5"></label>
+    </div>
+    <p id="selected-rating">Classificação: <span class="rating-value">0</span></p>
+ 
+    <script>
+        function handleRating(event) {
+            const stars = document.querySelectorAll('.rating input');
+            const ratingValue = document.querySelector('.rating-value');
+            let selectedRating = 0;
+ 
+            stars.forEach((star, index) => {
+                if (star.checked) {
+                    selectedRating = stars.length - index;
+                }
+            });
+ 
+            ratingValue.textContent = selectedRating;
+        }
+    </script>
+ 
+    <style>
+        .rating {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotateY(180deg);
+            display: flex;
+        }
+ 
+        .rating input {
+            display: none;
+        }
+ 
+        .rating label {
+            display: block;
+            cursor: pointer;
+            width: 20px;
+            /* Ajuste o tamanho da estrela conforme necessário */
+        }
+ 
+        .rating label:before {
+            content: '\2605';
+            /* Código unicode para a estrela cheia */
+            font-family: Arial, sans-serif;
+            /* Altere a fonte conforme necessário */
+            position: relative;
+            display: block;
+            font-size: 20px;
+            /* Ajuste o tamanho da estrela conforme necessário */
+            color: #0e1316;
+        }
+ 
+        .rating label:after {
+            content: '\2605';
+            /* Código unicode para a estrela cheia */
+            font-family: Arial, sans-serif;
+            /* Altere a fonte conforme necessário */
+            position: absolute;
+            display: block;
+            font-size: 20px;
+            /* Ajuste o tamanho da estrela conforme necessário */
+            color: #ffff00;
+            top: 0;
+            opacity: 0;
+            transition: .5s;
+            text-shadow: 0 4px 5px rgba(0, 0, 0, .5);
+        }
+ 
+        .rating label:hover:after,
+        .rating label:hover~label:after,
+        .rating input:checked~label:after {
+            opacity: 1;
+        }
+    </style>
+</body>
+
+
+
+

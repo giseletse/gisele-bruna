@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel's Spider-Man Remastered Pc</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Luigi's Mansion 3 - Switch - Nintendo</h1>
+    </header>
+
+    <div>
+        <h2>Descrição do produto</h2>
+        <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTkve34qyXH1OTFKFODX3kRrEF1TbBxDBdL8iZUTYItFUdPFDwQumbJZmFv2U886VwDHQrTjOs710lPdS6xU0lwfU5ojS91WDu43Uny3WYj8_o-8OLXLmuB&usqp=CAE">
+        <p>Luigi foi convidado a se hospedar no suntuoso hotel Last Resort. Mas com o sumiço de Mario e seus amigos, nosso herói vestido de verde terá de superar seus medos para poder salvá-los! Golpeie, sopre e aspire os fantasmas com a novíssima Poltergust G-00, e junte suas forças com Gooigi para decifrar engenhocas e derrotar chefões endiabrados em cada piso temático deste hotel. E a aventura não para por aí: entre no ScareScraper para jogar no modo cooperativo com até 7 outros jogadores pela rede local sem fio ou online*!
+        </p>
+
+        <p>Este jogo é compatível com:</p>
+        <ul>
+            <li>Pc</li>
+        </ul>
+
+        
+
+        <p>R$30,00</p>
+        <button onclick="addToCart('Luigis Mansion 3 - Switch - Nintendo', 30.00)">Adicionar ao Carrinho</button>
+    </main>
+
+    <script>
+        function addToCart(name, price) {
+            // Obtém o carrinho do armazenamento local ou cria um novo array vazio
+            const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+            // Adiciona o item ao carrinho
+            cartItems.push({ id: cartItems.length + 1, name, price });
+
+            // Armazena o carrinho atualizado no armazenamento local
+            localStorage.setItem('cart', JSON.stringify(cartItems));
+
+            // Redireciona para a página do carrinho
+            window.location.href = 'tcarinho.html';
+        }
+    </script>
+</body>
+
+</html>

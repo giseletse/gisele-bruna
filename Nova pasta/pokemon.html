@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Legends Arceus Switch</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Pokemon Legends Arceus Switch</h1>
+    </header>
+
+    <h2>Descrição do produto</h2>
+    <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQ4TR3ZwSxYlqRR1NEKHPrKud-nF7lS-Moy6pN1KVYXyuVQSQNs8DwljOotCAFvMmCQrOFQFkq354JPEr1hBmeuxaamln0m1Fx9AybwA42q&usqp=CAE">
+    <p>Prepare-se para um novo tipo de grande aventura Pokémon em Pokémon Legends: Arceus, um jogo totalmente novo da Game Freak que combina ação e exploração com as raízes de RPG da série Pokémon. Embarque em missões de pesquisa na antiga região de Hisui. Explore extensões naturais para capturar Pokémon selvagens, aprendendo seu comportamento, aproximando-se sorrateiramente e jogando uma Poké Ball bem direcionada. Você também pode jogar a Poké Ball contendo seu Pokémon aliado perto de um Pokémon selvagem para entrar na batalha sem problemas.</p>
+
+    <ol>
+        <p>Este jogo é compatível com:</p>
+        <p>PS4</p>
+            <p>R$30,00</p>
+            <button onclick="addToCart('Pokemon Legends Arceus Switch', 30.00)">Adicionar ao Carrinho</button>
+        </main>
+    
+        <script>
+            function addToCart(name, price) {
+                // Obtém o carrinho do armazenamento local ou cria um novo array vazio
+                const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    
+                // Adiciona o item ao carrinho
+                cartItems.push({ id: cartItems.length + 1, name, price });
+    
+                // Armazena o carrinho atualizado no armazenamento local
+                localStorage.setItem('cart', JSON.stringify(cartItems));
+    
+                // Redireciona para a página do carrinho
+                window.location.href = 'tcarinho.html';
+            }
+        </script>

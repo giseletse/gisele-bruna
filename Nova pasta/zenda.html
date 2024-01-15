@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zelda: Breath Of The Wild - Nintendo Switch</title>
+    
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+    </style>
+    <header>
+    <h1>Zelda: Breath Of The Wild - Nintendo Switch</h1>
+</header>
+
+    <H2>Descrição do produto</H2>
+    <img src="https://m.media-amazon.com/images/I/81FDtrQluyL._AC_SY741_.jpg">
+        <p>ENTRE EM UM MUNDO DE AVENTURAS. Escale torres e picos de montanhas em busca de novos destinos, pelo jogo para Nintendo Switch.</p>
+           <p> UM NOVO MUNDO DE POSSIBILIDADES. Explore Hyrule com liberdade incomparável, no conforto do seu console Nintendo Switch.</p>
+           <p>  MISTÉRIOS E ADRENALINA. Combata inimigos gigantescos, dungeons e diversos cenários inexplorados no jogo da famosa série, The Legend of Zelda.</p>
+           <p>   EMBARQUE EM UMA MISSÃO. Ajude Link a salvar Hyrule contra o mal encarnado Ganon, e salvar a princesa Zelda, enquanto explora o mundo do jogo para Nintendo Switch.</p>
+           <p> CLASSIFICAÇÃO INDICATIVA. O jogo The Legend of Zelda: Breath of The Wild, tem classificação indicativa de 10 anos.</p>
+           
+    <ol>
+ 
+        <p>Este jogo é compativel com:</p>
+        <p>ps4</p>
+ 
+        <p>R$30,00</p>
+        <button onclick="addToCart('Zelda: Breath Of The Wild - Nintendo Switch', 30.00)">Adicionar ao Carrinho</button>
+    </main>
+
+    <script>
+        function addToCart(name, price) {
+            // Obtém o carrinho do armazenamento local ou cria um novo array vazio
+            const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+            // Adiciona o item ao carrinho
+            cartItems.push({ id: cartItems.length + 1, name, price });
+
+            // Armazena o carrinho atualizado no armazenamento local
+            localStorage.setItem('cart', JSON.stringify(cartItems));
+
+            // Redireciona para a página do carrinho
+            window.location.href = 'tcarinho.html';
+        }
+    </script>
+       
+            
+        </body>
+</html>

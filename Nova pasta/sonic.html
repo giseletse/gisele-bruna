@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Legend of Zelda</title>
+    
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+    </style>
+    <header>
+    <h1>PS4 - Sonic Forces</h1>
+</header>
+
+    <H2>Descrição do produto</H2>
+    <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcStXAejq3elZ2mGLSmq19CRfiRpxA0JRlF8bHO2U8_BTp63izYqpOIs_b-hmcgilkfBYnhsgoa8p_W3nw3YzjAbAoYov_RI-_Jz3f9m2NU&usqp=CAE">
+        <p>Você está pronto para ajudar Sonic a salvar o mundo em Sonic Forces para PS4? Enfrente o malvado Dr. Eggman e seu novo aliado misterioso, Infinite, e junte um exército para restaurar a paz e a ordem.
+
+            Derrote inimigos em alta velocidade com a versão moderna do Sonic, salte sobre plataformas perigosas como o Sonic clássico e crie seu próprio personagem personalizado, equipado com poderosos dispositivos.</p>
+    <ol>
+ 
+        <p>Este jogo é compativel com:</p>
+        <p>ps4</p>
+ 
+        <p>R$30,00</p>
+        <button onclick="addToCart('PS4 - Sonic Forces', 30.00)">Adicionar ao Carrinho</button>
+    </main>
+
+    <script>
+        function addToCart(name, price) {
+            // Obtém o carrinho do armazenamento local ou cria um novo array vazio
+            const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+            // Adiciona o item ao carrinho
+            cartItems.push({ id: cartItems.length + 1, name, price });
+
+            // Armazena o carrinho atualizado no armazenamento local
+            localStorage.setItem('cart', JSON.stringify(cartItems));
+
+            // Redireciona para a página do carrinho
+            window.location.href = 'tcarinho.html';
+        }
+    </script>
+       
+            
+        </body>
+</html>

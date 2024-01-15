@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Star Wars Battle front</title>
+    <h1>Star Wars Battle front</h1>
+    <style>
+    </style>
+    <img src="https://www.bing.com/th?id=OPHS.9pLBqA1PQr0awg474C474&o=5&pid=21.1&w=142&h=142&qlt=100&dpr=1,3">
+    <h2>Discrição do produto</h2>
+ 
+    <p>Star Wars: Battlefront se passa no universo Star Wars e oferece aos jogadores a oportunidade de participar de
+        batalhas épicas inspiradas nos filmes da trilogia original. O jogo permite que os jogadores escolham lutar pelos
+        lados da Aliança Rebelde, Império Galáctico, República Galáctica ou Confederação de Sistemas Independentes.
+ 
+        Os jogadores podem se envolver em batalhas em vários planetas icônicos de Star Wars, como Hoth, Endor, Tatooine
+        e outros. Cada planeta apresenta cenários e ambientes familiares dos filmes, proporcionando uma experiência
+        autêntica aos fãs da saga.
+ 
+        O modo principal do jogo é o "Modo Conquista", onde as equipes lutam pelo controle de postos de comando em um
+        mapa. O jogo também inclui modos adicionais, como "Captura da Bandeira" e "Heróis e Vilões", onde os jogadores
+        podem controlar personagens icônicos como Luke Skywalker, Darth Vader, Han Solo e Boba Fett.
+ 
+        Star Wars: Battlefront recebeu elogios por sua representação autêntica do universo Star Wars e por oferecer
+        experiências multiplayer envolventes. O sucesso do primeiro jogo levou ao desenvolvimento de sequências e à
+        revitalização da série com os títulos subsequentes lançados pela Electronic Arts.</p>
+ 
+    <ol>
+ 
+        <p>Este jogo é compativel com:
+        <p>Xbox</p>
+ 
+        
+        <p>R$30,00</p>
+        <button onclick="addToCart('Star Wars Battle front', 30.00)">Adicionar ao Carrinho</button>
+    </main>
+
+    <script>
+        function addToCart(name, price) {
+            // Obtém o carrinho do armazenamento local ou cria um novo array vazio
+            const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+            // Adiciona o item ao carrinho
+            cartItems.push({ id: cartItems.length + 1, name, price });
+
+            // Armazena o carrinho atualizado no armazenamento local
+            localStorage.setItem('cart', JSON.stringify(cartItems));
+
+            // Redireciona para a página do carrinho
+            window.location.href = 'tcarinho.html';
+        }
+        </script>  
+        </body>
+</html>

@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel's Spider-Man Remastered Pc</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Winter Games 2023 - PS5</h1>
+    </header>
+
+    <div>
+        <h2>Descrição do produto</h2>
+        <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTvDWvbuPUzptEFVUbiS21H4lJo0iFFP3bClo9Zu0T7BIFyAxAH3moYfwrtRo8toECKZFI9jix9amHif4cjebGFE16gjlxkEHFY-4u2tCxUVyfR3L1ohi_-2Q&usqp=CAE">
+        <p>Winter Games 2023 é um jogo de esportes emocionante em um disfarce 3D moderno. O jogador pode provar suas habilidades atléticas em dez disciplinas dinâmicas de esportes de inverno, por exemplo, salto de esqui, biatlo, esqui cross, esqueleto ou super-G. Parta em busca de recordes, melhores tempos e troféus. Além das disciplinas individuais, também existem copas prontas para jogar, nas quais várias disciplinas podem ser jogadas uma após a outra, e competições personalizadas que você mesmo pode montar. Jogue sozinho contra a IA ou compita no modo multijogador local contra até três amigos em um emocionante duelo de esportes de inverno.</p>
+
+        <p>Este jogo é compatível com:</p>
+        <ul>
+            <li>Pc</li>
+        </ul>
+
+        
+
+        <p>R$30,00</p>
+        <button onclick="addToCart('Winter Games 2023 - PS5', 30.00)">Adicionar ao Carrinho</button>
+    </main>
+
+    <script>
+        function addToCart(name, price) {
+            // Obtém o carrinho do armazenamento local ou cria um novo array vazio
+            const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+            // Adiciona o item ao carrinho
+            cartItems.push({ id: cartItems.length + 1, name, price });
+
+            // Armazena o carrinho atualizado no armazenamento local
+            localStorage.setItem('cart', JSON.stringify(cartItems));
+
+            // Redireciona para a página do carrinho
+            window.location.href = 'tcarinho.html';
+        }
+    </script>
+</body>
+
+</html>

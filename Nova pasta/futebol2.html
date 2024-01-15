@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Legend of Zelda</title>
+    
+    <style>
+            body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+    </style>
+    <header>
+    <h1>Game FIFA 23 BR - PS4</h1>
+</header>
+    <H2>Descrição do produto</H2>
+    <img
+        src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRHYdbRmLeOQMeA7nUbE9i0ptndIZ0yLhq8IhTiQlsdv1rkYMc-SVFBDnvFNkQTNjQYrDNXYyCpiHndSw2RMYMr3oMBSTaiB3uXw7goi5TW7F4yWKG5wpBYvw&usqp=CAE">
+    <p>Ea sports fifa 23 traz o Maior Jogo do Mundo aos gramados com a chegada dos torneios da fifa World Cup masculina e feminina</p>
+ 
+    <ol>
+    <main>
+        <p>Este jogo é compativel com:
+        <p>PS4</p>
+ 
+        <p>R$30,00</p>
+        <button onclick="addToCart('Game FIFA 23 BR - PS4', 30.00)">Adicionar ao Carrinho</button>
+    </main>
+
+    <script>
+        function addToCart(name, price) {
+            // Obtém o carrinho do armazenamento local ou cria um novo array vazio
+            const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+            // Adiciona o item ao carrinho
+            cartItems.push({ id: cartItems.length + 1, name, price });
+
+            // Armazena o carrinho atualizado no armazenamento local
+            localStorage.setItem('cart', JSON.stringify(cartItems));
+
+            // Redireciona para a página do carrinho
+            window.location.href = 'tcarinho.html';
+        }
+    </script>
+       
+            
+       
+            
+        </body>
+</html>

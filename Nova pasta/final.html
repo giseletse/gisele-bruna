@@ -1,0 +1,84 @@
+<!-- Página de Compra Finalizada -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra Finalizada</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        #orderDetails {
+            width: 60%;
+            margin: auto;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Compra Finalizada</h1>
+    </header>
+    
+    <main>
+        <div id="orderDetails"></div>
+        <button onclick="returnToCart()">Voltar para o Carrinho</button>
+    </main>
+
+    <script>
+        // Obtém os detalhes do pedido do armazenamento local
+        const orderDetails = JSON.parse(localStorage.getItem('orderDetails'));
+
+        // Exibe os detalhes do pedido na página
+        if (orderDetails) {
+            const orderDetailsDiv = document.getElementById('orderDetails');
+            orderDetailsDiv.innerHTML = `
+                <h2>Detalhes do Pedido:</h2>
+                <p><strong>Produtos Comprados:</strong></p>
+                <ul>
+                    ${orderDetails.products.map(product => `<li>${product}</li>`).join('')}
+                </ul>
+                <p><strong>Status do Pagamento:</strong> ${orderDetails.paymentStatus}</p>
+            `;
+        }
+
+        // Função para voltar para a página do carrinho
+        function returnToCart() {
+            window.location.href = 'tcarrinho.html';
+        }
+    </script>
+</body>
+</html>

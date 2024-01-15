@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> </title>
+    
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    header {
+        text-align: center;
+        background-color: #333;
+        color: white;
+        padding: 10px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    p {
+        margin: 10px 0;
+    }
+
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+    }
+
+    input {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+</style>
+</head>
+<header>
+<h1>EA Sports FC 24 - PlayStation 5</h1>
+</header>
+
+<img src="https://m.media-amazon.com/images/I/61+lZsNKGuL._AC_SX679_.jpg">
+
+<h2>Discrição do produto</h2>
+
+<p>Com este jogo Rabbids, você desfrutará de horas de diversão e novos desafios que lhe permitirão melhorar como
+    jogador.
+
+    Interaja com outros jogadores
+    Você poderá desfrutar de uma experiência incomparável, pois permite que você jogue com seus amigos e
+    compartilhar momentos inesquecíveis.
+
+    Diversão sem fronteiras
+    Você será capaz de compartilhar cada jogo com pessoas de todo o mundo, pois é possível conectar-se de maneira
+    online.</p>
+
+<ol>
+
+    <p>Este jogo é compativel com:
+    <p>Xbox</p>
+
+ 
+        <p>R$30,00</p>
+        <button onclick="addToCart('Game FIFA 23 BR - PS4', 30.00)">Adicionar ao Carrinho</button>
+    </main>
+
+    <script>
+        function addToCart(name, price) {
+            // Obtém o carrinho do armazenamento local ou cria um novo array vazio
+            const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+            // Adiciona o item ao carrinho
+            cartItems.push({ id: cartItems.length + 1, name, price });
+
+            // Armazena o carrinho atualizado no armazenamento local
+            localStorage.setItem('cart', JSON.stringify(cartItems));
+
+            // Redireciona para a página do carrinho
+            window.location.href = 'tcarinho.html';
+        }
+    </script>
+       
+            
+            
+        </body>
+        </html>
